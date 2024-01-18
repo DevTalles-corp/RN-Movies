@@ -59,12 +59,11 @@ export const useMovies = () => {
     // Methods
     popularNextPage: async() => {
       popularPageNumber++;
-      console.log({popularPageNumber});
       const popularMovies = await UseCases.moviesPopularUseCase( movieDBFetcher, {
         page: popularPageNumber,
       });
 
-      setPopular( prev => [...prev, ...popularMovies ] );
+      setPopular( prev => [...prev, ...popularMovies ] )
     }
   };
 };
